@@ -1,20 +1,22 @@
 import React from "react";
+import "./styles.css"
+//Reusable props
 
-function App() {
+function App(props) {
   return (
     <div>
-      <h1 className="heading">My Contacts</h1>
+      <h1 className="heading" >My Contacts</h1>
       <div className="card">
         <div className="top">
-          <h2>Beyonce</h2>
+        <h2>{props.name}</h2>
           <img
-            src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
+            src={props.imgURL}
             alt="avatar_img"
           />
         </div>
         <div className="bottom">
-          <p>+123 456 789</p>
-          <p>b@beyonce.com</p>
+          <p>{props.phone}</p>
+          <p>{props.email}</p>
         </div>
       </div>
     </div>
@@ -22,3 +24,4 @@ function App() {
 }
 
 export default App;
+
